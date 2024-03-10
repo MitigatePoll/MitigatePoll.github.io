@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LB Environnement</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuLinks = document.querySelectorAll('.menu ul li a');
+            var contents = document.querySelectorAll('.content');
+
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    
+                    var targetId = this.getAttribute('data-target'); 
+                    var targetContent = document.getElementById(targetId);
+
+                    // Désactive tous les contenus
+                    contents.forEach(function(content) {
+                        content.classList.remove('active');
+                    });
+
+                    // Active le contenu cible
+                    targetContent.classList.add('active');
+
+                    targetContent.classList.add('active'); 
+
+                    menuLinks.forEach(function(link) {
+                        link.classList.remove('active'); 
+                     });
+                    this.classList.add('active'); 
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>LB Environnement</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#" class="toggle-content active" data-target="content1">Accueil</a></li>
+                <li><a href="#" class="toggle-content" data-target="content2">Aide à la conception, au dépôt et à la conduite de projet</a></li>
+                <li><a href="#" class="toggle-content" data-target="content3">Contribution aux projets</a></li>
+                <li><a href="#" class="toggle-content" data-target="content4">Expertise</a></li>
+                <li><a href="#" class="toggle-content" data-target="content5">A propos</a></li>
+                <li><a href="#" class="toggle-content" data-target="content6">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content1" class="content active">
+        <br><br>
+        <div class="zoom1">
+            <img src="PIcture_1.jpg" alt="Description de la photo 1">
+        </div>
+        <div class="text">
+            <p>Spécialiste en Qualité de l'Air,</p><p>je vous accompagne dans vos projets :</p>
+                <ul id="liste1" >
+                    <li>Montage, dépôt, management</li>
+                    <li>Contributeur</li>
+                    <li>Expertise</li>
+                </ul>
+        </div>
+    </div>
+    <div id="content2" class="content">
+        <p>Stratégie :<p>
+        <ul>
+            <li>intégration dans vision moyen/long terme</li>
+        </ul>
+        <p>Montage :</p>
+        <ul>
+            <li>choix du guichet (ex. ADEME, LIFE), relationnel</li>
+            <li>Objectifs généraux, état de l’art, analyse de risque</li>
+            <li>Consortium, choix RH</li>
+            <li>Structure : synoptique, Gantt</li>
+            <li>Montage financier : co-financement, choix</li>
+            <li>Rédaction</li>
+        </ul>
+        <p>Dépôt : rétroplanning, animation</p>
+        <p>Conduite de projet</p>
+        <ul>
+            <li>Conseils, coaching, animation</li>
+            <li>Relation avec les donneurs d’ordre</li>
+            <li>Gestion des Jalons et Livrables</li>
+        </ul>
+        <p>Références :</p>
+        <ul>
+            <li><a href="https://lifeabaa2021.eu/" target="_blank">Projet ABAA</a></li>
+            <li><a href="https://www.ineris.fr/fr/projet-carpe-caracterisation-reduction-emissions-procedes-metallurgie-poudres-metalliques-hautes" target="_blank">Projet CaRPE</a></li>
+            <li><a href="https://librairie.ademe.fr/air-et-bruit/5469-caracterisations-toxicologiques-in-vitro-chimiques-et-physiques-de-particules-prelevees-dans-l-air-d-habitacles-de-transport-en-roulage.html" target="_blank">Projet ToxinTransport</a></li>
+        </ul>
+    </div>
+    <div id="content3" class="content">
+        <p>Mes compétences en qualité de l’air, ainsi qu’en science des aérosols (ex. métrologie) contribuent à la réalisation de différents projets, qu’il s’agisse de recherche appliquée comme d’actions opérationnelles.</p>
+        <p>Références :</p>
+        <ul>
+            <li>BCube-PUF : projet ANSES (épidémiologie / PUF)</li>
+            <li>Pesti’Air : co-direction de thèse sur les pesticides dans l’air (EHESP, Air Breizh)</li>
+        </ul>
+    </div>
+    <div id="content4" class="content">
+        <p>Comités d’orientation scientifique</p>
+        <p>Appels à projets :</p>
+        <ul>
+            <li>Evaluation des projets soumis</li>
+            <li>Comité de sélection</li>
+        </ul>
+        <p>Interventions :</p>
+        <ul>
+            <li>Conférences</li>
+            <li>Formations</li>
+        </ul>
+    </div>
+    <div id="content5" class="content">
+        <h2>Olivier Le Bihan</h2>
+        <h3>Mini-CV :</h3>
+        <ul>
+            <li>Février 2024 : création de l’entreprise LB Environnement</li>
+            <li>Depuis 2021 : Professeur Associé à l’IMT Atlantique</li>
+            <li>2020-2023 : Chef de Service à Air Breizh</li>
+            <li>2017 : HDR</li>
+            <li>2001-2020 : ingénieur Etudes et Recherche à l’INERIS</li>
+            <li>1998-2001 : séjours scientifiques en Suisse (EPFL) et Danemark (NERI)</li>
+            <li>1997 : Docteur en Physique (aérosol marin)</li>
+            <li>1992 : DESS «Science des Aérosols et Aérocontamination</li>
+        </ul>        
+    </div>
+    <div id="content6" class="content">
+        <h2>Formulaire de contact :</h2>
+        <p>Merci de compléter le captcha pour afficher l'adresse e-mail.</p>
+        <div id="captchaContainer">
+            <div id="captcha"></div>
+            <input type="text" id="captchaInput" placeholder="Entrez le captcha">
+            <button id="submitBtn" onclick="verifierCaptcha()">Valider</button>
+        </div>
+        <div id="email" style="display: none;">welcome.at.lbe@outlook.fr</div>
+    </div>
+    <script>
+        function genererCaptcha() {
+            var captcha = Math.floor(1000 + Math.random() * 9000); // Génère un code à 4 chiffres
+            document.getElementById('captcha').textContent = captcha;
+            return captcha;
+        }
+
+        function verifierCaptcha() {
+            var captchaInput = document.getElementById('captchaInput').value;
+            var captcha = document.getElementById('captcha').textContent;
+            var emailDiv = document.getElementById('email');
+
+            if (captchaInput === captcha) {
+                emailDiv.style.display = 'block';
+            } else {
+                alert('Captcha incorrect. Veuillez réessayer.');
+            }
+        }
+
+        // Génère un captcha au chargement de la page
+        window.onload = function() {
+            genererCaptcha();
+        };
+    </script>
+    <footer>
+        <div class="container">
+            <p>Ce site est une création de LB Environnement &copy; 2024. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
